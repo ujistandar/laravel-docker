@@ -44,6 +44,18 @@ services:
         networks:
             - company_profile
 
+      npm:
+        image: node:16
+        container_name: npm
+        ports:
+            - 3000:3000
+        volumes:
+            - "./www/:/var/www/alatlab"
+        working_dir: /var/www/alatlab
+        entrypoint: ['npm']
+        networks:
+            - alatlab
+
 networks:
     company_profile:
         driver: bridge

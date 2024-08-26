@@ -15,3 +15,6 @@ docker-compose exec app composer install
 docker-compose exec app php artisan key:generate
 
 open browser http://hostname:8000
+
+#Laravel artisan
+docker-compose exec app php artisan make: ....
